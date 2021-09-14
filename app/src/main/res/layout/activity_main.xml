@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvBiodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/biodata"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/llSatu"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvBiodata"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@color/purple_200"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivAcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_school_24"
+                    android:contentDescription="@string/education_text" />
+
+                <TextView
+                    android:id="@+id/tvProfile"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/education"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivExperience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_work_24"
+                    android:contentDescription="@string/text_work" />
+
+                <TextView
+                    android:id="@+id/tvExperience"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/experience"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDua"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/llSatu"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@color/teal_700"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivPublication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_library_books_24"
+                    android:contentDescription="@string/img_pub" />
+
+                <TextView
+                    android:id="@+id/tvPublication"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publication"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@color/purple_500"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_date_range_24"/>
+
+                <TextView
+                    android:id="@+id/tvSchedule"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTiga"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/llDua"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@color/biru_muda"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_perm_contact_calendar_24"/>
+
+                <TextView
+                    android:id="@+id/tvContact"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@color/biru_tua"
+            tools:ignore="MissingConstraints,UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivGithub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_device_hub_24"/>
+
+                <TextView
+                    android:id="@+id/tvGithub"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/github"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCreated"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llTiga"
+        android:text="Created with Fun by Fachmi Dimas Ardhana"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
